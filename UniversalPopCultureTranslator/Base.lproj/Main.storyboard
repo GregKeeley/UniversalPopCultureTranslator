@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bME-4m-gsf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bME-4m-gsf">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -50,228 +50,425 @@
         <!--SciFi -> Eng-->
         <scene sceneID="4jF-yD-5WU">
             <objects>
-                <viewController id="wZc-gG-3Wo" sceneMemberID="viewController">
+                <viewController id="wZc-gG-3Wo" customClass="SciFiToEngViewController" customModule="UniversalPopCultureTranslator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="abu-EV-JUT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a2s-k8-snN">
-                                <rect key="frame" x="11" y="621" width="392" height="181"/>
+                                <rect key="frame" x="10" y="632" width="394" height="171"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6zf-rh-Rlu">
                                         <rect key="frame" x="8" y="8" width="30" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="0"/>
+                                        <connections>
+                                            <action selector="sciFiButton:" destination="EWB-bI-jKx" eventType="touchUpInside" id="SSf-JO-JUn"/>
+                                            <action selector="sciFiButtonPressed:" destination="wZc-gG-3Wo" eventType="touchUpInside" id="M9g-Sc-UYL"/>
+                                            <action selector="sciFiButtonPressed:" destination="EWB-bI-jKx" eventType="touchUpInside" id="lhw-dz-WiJ"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8FP-dK-B9R">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8FP-dK-B9R">
                                         <rect key="frame" x="46" y="8" width="30" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="1"/>
+                                        <connections>
+                                            <action selector="sciFiButtonPressed:" destination="wZc-gG-3Wo" eventType="touchUpInside" id="byk-DU-9tt"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b6H-wM-ehJ">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b6H-wM-ehJ">
                                         <rect key="frame" x="84" y="8" width="30" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="2"/>
+                                        <connections>
+                                            <action selector="sciFiButtonPressed:" destination="wZc-gG-3Wo" eventType="touchUpInside" id="Iqf-wt-51a"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vDD-ey-vRR">
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vDD-ey-vRR">
                                         <rect key="frame" x="122" y="8" width="30" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="3"/>
+                                        <connections>
+                                            <action selector="sciFiButtonPressed:" destination="wZc-gG-3Wo" eventType="touchUpInside" id="Nbo-Av-qwY"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j2x-eC-5uS">
+                                    <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j2x-eC-5uS">
                                         <rect key="frame" x="210" y="8" width="30" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="5"/>
+                                        <connections>
+                                            <action selector="sciFiButtonPressed:" destination="wZc-gG-3Wo" eventType="touchUpInside" id="Ovf-G7-aZL"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mcw-dH-yQ1">
+                                    <button opaque="NO" tag="6" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mcw-dH-yQ1">
                                         <rect key="frame" x="248" y="8" width="30" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="6"/>
+                                        <connections>
+                                            <action selector="sciFiButtonPressed:" destination="wZc-gG-3Wo" eventType="touchUpInside" id="DVt-ZL-ttA"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WdP-DY-Ngv">
+                                    <button opaque="NO" tag="7" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WdP-DY-Ngv">
                                         <rect key="frame" x="286" y="8" width="30" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="7"/>
+                                        <connections>
+                                            <action selector="sciFiButtonPressed:" destination="wZc-gG-3Wo" eventType="touchUpInside" id="KoT-1m-aiL"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HzH-E1-FbM">
+                                    <button opaque="NO" tag="8" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HzH-E1-FbM">
                                         <rect key="frame" x="324" y="8" width="30" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="8"/>
+                                        <connections>
+                                            <action selector="sciFiButtonPressed:" destination="wZc-gG-3Wo" eventType="touchUpInside" id="0OZ-to-fI9"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2mg-dn-2PA">
+                                    <button opaque="NO" tag="9" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2mg-dn-2PA">
                                         <rect key="frame" x="362" y="8" width="30" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="9"/>
+                                        <connections>
+                                            <action selector="sciFiButtonPressed:" destination="wZc-gG-3Wo" eventType="touchUpInside" id="3x3-0Y-o5h"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4os-nN-nMT">
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4os-nN-nMT">
                                         <rect key="frame" x="160" y="8" width="30" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="4"/>
+                                        <connections>
+                                            <action selector="sciFiButtonPressed:" destination="wZc-gG-3Wo" eventType="touchUpInside" id="vfy-SL-VXW"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Peb-zv-XK5">
+                                    <button opaque="NO" tag="10" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Peb-zv-XK5">
                                         <rect key="frame" x="10" y="55" width="30" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Q"/>
+                                        <connections>
+                                            <action selector="sciFiButtonPressed:" destination="wZc-gG-3Wo" eventType="touchUpInside" id="ZOy-hW-NjO"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vGT-Fl-ekN">
+                                    <button opaque="NO" tag="11" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vGT-Fl-ekN">
                                         <rect key="frame" x="48" y="55" width="30" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="W"/>
+                                        <connections>
+                                            <action selector="sciFiButtonPressed:" destination="wZc-gG-3Wo" eventType="touchUpInside" id="KPl-0s-vRF"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6eV-xn-mUa">
+                                    <button opaque="NO" tag="12" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6eV-xn-mUa">
                                         <rect key="frame" x="86" y="55" width="30" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="E"/>
+                                        <connections>
+                                            <action selector="sciFiButtonPressed:" destination="wZc-gG-3Wo" eventType="touchUpInside" id="tnT-oc-kRR"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FvP-th-Zb8">
+                                    <button opaque="NO" tag="13" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FvP-th-Zb8">
                                         <rect key="frame" x="124" y="55" width="30" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="R"/>
+                                        <connections>
+                                            <action selector="sciFiButtonPressed:" destination="wZc-gG-3Wo" eventType="touchUpInside" id="eh8-ia-pfU"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8nw-ag-EJG">
-                                        <rect key="frame" x="162" y="55" width="30" height="30"/>
+                                    <button opaque="NO" tag="14" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8nw-ag-EJG">
+                                        <rect key="frame" x="162" y="56" width="30" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="T"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <state key="normal" title="T">
+                                            <color key="titleColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="sciFiButtonPressed:" destination="wZc-gG-3Wo" eventType="touchUpInside" id="rOI-8v-Nrb"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JXR-e1-5SR">
+                                    <button opaque="NO" tag="15" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JXR-e1-5SR">
                                         <rect key="frame" x="200" y="55" width="30" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Y"/>
+                                        <connections>
+                                            <action selector="sciFiButtonPressed:" destination="wZc-gG-3Wo" eventType="touchUpInside" id="I3f-60-wQJ"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EBn-EA-Tpt">
+                                    <button opaque="NO" tag="16" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EBn-EA-Tpt">
                                         <rect key="frame" x="238" y="55" width="30" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="U"/>
+                                        <connections>
+                                            <action selector="sciFiButtonPressed:" destination="wZc-gG-3Wo" eventType="touchUpInside" id="z0b-Uz-EI6"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yuq-UU-so7">
+                                    <button opaque="NO" tag="17" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yuq-UU-so7">
                                         <rect key="frame" x="276" y="55" width="30" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="I"/>
+                                        <connections>
+                                            <action selector="sciFiButtonPressed:" destination="wZc-gG-3Wo" eventType="touchUpInside" id="Rio-KM-2tP"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z2r-q2-GnO">
+                                    <button opaque="NO" tag="18" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z2r-q2-GnO">
                                         <rect key="frame" x="314" y="55" width="30" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="O"/>
+                                        <connections>
+                                            <action selector="sciFiButtonPressed:" destination="wZc-gG-3Wo" eventType="touchUpInside" id="YHG-JD-5AH"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VoM-XY-lSn">
+                                    <button opaque="NO" tag="19" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VoM-XY-lSn">
                                         <rect key="frame" x="352" y="55" width="30" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="P"/>
+                                        <connections>
+                                            <action selector="sciFiButtonPressed:" destination="wZc-gG-3Wo" eventType="touchUpInside" id="0S5-l2-XN3"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WVr-4p-GeY">
+                                    <button opaque="NO" tag="20" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WVr-4p-GeY">
                                         <rect key="frame" x="29" y="93" width="30" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="A"/>
+                                        <connections>
+                                            <action selector="sciFiButtonPressed:" destination="wZc-gG-3Wo" eventType="touchUpInside" id="aAM-fC-O08"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8qu-Pa-3n8">
+                                    <button opaque="NO" tag="21" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8qu-Pa-3n8">
                                         <rect key="frame" x="67" y="93" width="30" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="S"/>
+                                        <connections>
+                                            <action selector="sciFiButtonPressed:" destination="wZc-gG-3Wo" eventType="touchUpInside" id="6oz-KG-4Vl"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wrj-YM-vJx">
+                                    <button opaque="NO" tag="22" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wrj-YM-vJx">
                                         <rect key="frame" x="105" y="93" width="30" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="D"/>
+                                        <connections>
+                                            <action selector="sciFiButtonPressed:" destination="wZc-gG-3Wo" eventType="touchUpInside" id="Bdw-Kn-Fhv"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d6L-5N-04P">
+                                    <button opaque="NO" tag="23" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d6L-5N-04P">
                                         <rect key="frame" x="143" y="93" width="30" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="F"/>
+                                        <connections>
+                                            <action selector="sciFiButtonPressed:" destination="wZc-gG-3Wo" eventType="touchUpInside" id="wjJ-Ij-CN4"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="acY-ir-85D">
+                                    <button opaque="NO" tag="24" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="acY-ir-85D">
                                         <rect key="frame" x="181" y="93" width="30" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="G"/>
+                                        <connections>
+                                            <action selector="sciFiButtonPressed:" destination="wZc-gG-3Wo" eventType="touchUpInside" id="Gfd-eT-VRE"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OCw-ox-Z2H">
+                                    <button opaque="NO" tag="25" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OCw-ox-Z2H">
                                         <rect key="frame" x="219" y="93" width="30" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="H"/>
+                                        <connections>
+                                            <action selector="sciFiButtonPressed:" destination="wZc-gG-3Wo" eventType="touchUpInside" id="qBB-YI-gIh"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BQ5-6q-9oW">
+                                    <button opaque="NO" tag="26" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BQ5-6q-9oW">
                                         <rect key="frame" x="257" y="93" width="30" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="J"/>
+                                        <connections>
+                                            <action selector="sciFiButtonPressed:" destination="wZc-gG-3Wo" eventType="touchUpInside" id="l2Y-dx-NkT"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KMl-i8-oRB">
+                                    <button opaque="NO" tag="27" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KMl-i8-oRB">
                                         <rect key="frame" x="295" y="93" width="30" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="K"/>
+                                        <connections>
+                                            <action selector="sciFiButtonPressed:" destination="wZc-gG-3Wo" eventType="touchUpInside" id="YMI-nU-z3z"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dhb-fg-YGS">
+                                    <button opaque="NO" tag="28" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dhb-fg-YGS">
                                         <rect key="frame" x="333" y="93" width="30" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="L"/>
+                                        <connections>
+                                            <action selector="sciFiButtonPressed:" destination="wZc-gG-3Wo" eventType="touchUpInside" id="r8J-BY-jU0"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="saB-vi-X2D">
-                                        <rect key="frame" x="52" y="131" width="30" height="30"/>
+                                    <button opaque="NO" tag="100" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VEg-nR-oHR">
+                                        <rect key="frame" x="339" y="133" width="47" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="SPACE"/>
+                                        <connections>
+                                            <action selector="sciFiButtonPressed:" destination="wZc-gG-3Wo" eventType="touchUpInside" id="iC5-q9-NMH"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="100" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T6H-62-dCF">
+                                        <rect key="frame" x="8" y="133" width="47" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="SPACE"/>
+                                        <connections>
+                                            <action selector="sciFiButtonPressed:" destination="wZc-gG-3Wo" eventType="touchUpInside" id="rwb-KE-0Ga"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="29" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="saB-vi-X2D">
+                                        <rect key="frame" x="67" y="133" width="30" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Z"/>
+                                        <connections>
+                                            <action selector="sciFiButtonPressed:" destination="wZc-gG-3Wo" eventType="touchUpInside" id="PAm-rf-pp1"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iid-P2-ZXF">
-                                        <rect key="frame" x="90" y="131" width="30" height="30"/>
+                                    <button opaque="NO" tag="30" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iid-P2-ZXF">
+                                        <rect key="frame" x="105" y="133" width="30" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="X"/>
+                                        <connections>
+                                            <action selector="sciFiButtonPressed:" destination="wZc-gG-3Wo" eventType="touchUpInside" id="goj-TJ-PoC"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xOh-zg-5zX">
-                                        <rect key="frame" x="128" y="131" width="30" height="30"/>
+                                    <button opaque="NO" tag="31" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xOh-zg-5zX">
+                                        <rect key="frame" x="143" y="133" width="30" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="C"/>
+                                        <connections>
+                                            <action selector="sciFiButtonPressed:" destination="wZc-gG-3Wo" eventType="touchUpInside" id="jq7-9h-86g"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hJj-SM-g8d">
-                                        <rect key="frame" x="166" y="131" width="30" height="30"/>
+                                    <button opaque="NO" tag="32" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hJj-SM-g8d">
+                                        <rect key="frame" x="181" y="133" width="30" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="V"/>
+                                        <connections>
+                                            <action selector="sciFiButtonPressed:" destination="wZc-gG-3Wo" eventType="touchUpInside" id="SNc-xe-esQ"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qqp-yS-mbr">
-                                        <rect key="frame" x="204" y="131" width="30" height="30"/>
+                                    <button opaque="NO" tag="33" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qqp-yS-mbr">
+                                        <rect key="frame" x="219" y="133" width="30" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="B"/>
+                                        <connections>
+                                            <action selector="sciFiButtonPressed:" destination="wZc-gG-3Wo" eventType="touchUpInside" id="MIR-BF-pe3"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pth-nr-n6t">
-                                        <rect key="frame" x="242" y="131" width="30" height="30"/>
+                                    <button opaque="NO" tag="34" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pth-nr-n6t">
+                                        <rect key="frame" x="257" y="133" width="30" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="N"/>
+                                        <connections>
+                                            <action selector="sciFiButtonPressed:" destination="wZc-gG-3Wo" eventType="touchUpInside" id="DuO-J7-WC4"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Igx-vq-jbm">
-                                        <rect key="frame" x="280" y="131" width="30" height="30"/>
+                                    <button opaque="NO" tag="35" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Igx-vq-jbm">
+                                        <rect key="frame" x="295" y="133" width="30" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="M"/>
+                                        <connections>
+                                            <action selector="sciFiButtonPressed:" destination="wZc-gG-3Wo" eventType="touchUpInside" id="NlK-ig-iW4"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="181" id="lX2-Se-TCy"/>
+                                    <constraint firstAttribute="height" constant="171" id="jgH-Ky-GcH"/>
                                 </constraints>
                             </view>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Bwf-LF-YxP">
-                                <rect key="frame" x="20" y="186" width="374" height="326"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Bwf-LF-YxP">
+                                <rect key="frame" x="10" y="241" width="394" height="381"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="381" id="iXp-Rq-WYZ"/>
+                                </constraints>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SciFi to English" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pFM-dh-Lrz">
-                                <rect key="frame" x="20" y="76" width="116" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SciFi to English" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pFM-dh-Lrz">
+                                <rect key="frame" x="10" y="54" width="121" height="21"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rn1-jb-2t6">
+                                <rect key="frame" x="10" y="136" width="394" height="95"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="95" id="NPL-aB-cxh"/>
+                                </constraints>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a Language:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zby-Ct-zy5">
+                                <rect key="frame" x="10" y="85" width="109" height="15"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="a2s-k8-snN" firstAttribute="leading" secondItem="f6H-01-eLV" secondAttribute="leading" constant="11" id="dVN-Nb-Tqm"/>
-                            <constraint firstItem="f6H-01-eLV" firstAttribute="bottom" secondItem="a2s-k8-snN" secondAttribute="bottom" constant="11" id="kf2-pu-iyi"/>
-                            <constraint firstItem="f6H-01-eLV" firstAttribute="trailing" secondItem="a2s-k8-snN" secondAttribute="trailing" constant="11" id="uEB-iE-TEN"/>
+                            <constraint firstItem="a2s-k8-snN" firstAttribute="leading" secondItem="f6H-01-eLV" secondAttribute="leading" constant="10" id="0Rd-JT-W5o"/>
+                            <constraint firstItem="f6H-01-eLV" firstAttribute="bottom" secondItem="a2s-k8-snN" secondAttribute="bottom" constant="10" id="3w0-Dc-HTv"/>
+                            <constraint firstItem="pFM-dh-Lrz" firstAttribute="top" secondItem="f6H-01-eLV" secondAttribute="top" constant="10" id="G4d-VM-HZX"/>
+                            <constraint firstItem="Bwf-LF-YxP" firstAttribute="leading" secondItem="f6H-01-eLV" secondAttribute="leading" constant="10" id="aTG-qx-JC0"/>
+                            <constraint firstItem="Zby-Ct-zy5" firstAttribute="leading" secondItem="f6H-01-eLV" secondAttribute="leading" constant="10" id="c91-xq-0O9"/>
+                            <constraint firstItem="rn1-jb-2t6" firstAttribute="trailing" secondItem="f6H-01-eLV" secondAttribute="trailing" constant="-10" id="ciI-3b-5sx"/>
+                            <constraint firstItem="f6H-01-eLV" firstAttribute="trailing" secondItem="Bwf-LF-YxP" secondAttribute="trailing" constant="10" id="dVY-ku-PYQ"/>
+                            <constraint firstItem="a2s-k8-snN" firstAttribute="top" secondItem="Bwf-LF-YxP" secondAttribute="bottom" constant="10" id="fAl-Po-y1F"/>
+                            <constraint firstItem="Bwf-LF-YxP" firstAttribute="top" secondItem="rn1-jb-2t6" secondAttribute="bottom" constant="10" id="kax-Xo-WVB"/>
+                            <constraint firstItem="Zby-Ct-zy5" firstAttribute="top" secondItem="pFM-dh-Lrz" secondAttribute="bottom" constant="10" id="lVW-Mc-g0g"/>
+                            <constraint firstItem="f6H-01-eLV" firstAttribute="trailing" secondItem="a2s-k8-snN" secondAttribute="trailing" constant="10" id="qqS-S7-DcB"/>
+                            <constraint firstItem="rn1-jb-2t6" firstAttribute="leading" secondItem="f6H-01-eLV" secondAttribute="leading" constant="10" id="xQl-Ya-X6G"/>
+                            <constraint firstItem="pFM-dh-Lrz" firstAttribute="leading" secondItem="f6H-01-eLV" secondAttribute="leading" constant="10" id="yzy-k4-6Hn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="f6H-01-eLV"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="SciFi -&gt; Eng" image="doc.text.fill" catalog="system" id="MsP-ab-gUZ"/>
+                    <connections>
+                        <outlet property="languagePicker" destination="rn1-jb-2t6" id="cyw-K2-Qhq"/>
+                        <outlet property="translatedTextView" destination="Bwf-LF-YxP" id="LMt-sD-Jcc"/>
+                        <outletCollection property="sciFiButtons" destination="6zf-rh-Rlu" collectionClass="NSMutableArray" id="cG3-we-zIP"/>
+                        <outletCollection property="sciFiButtons" destination="8FP-dK-B9R" collectionClass="NSMutableArray" id="Uj3-2v-s5I"/>
+                        <outletCollection property="sciFiButtons" destination="b6H-wM-ehJ" collectionClass="NSMutableArray" id="VKu-JA-iqa"/>
+                        <outletCollection property="sciFiButtons" destination="vDD-ey-vRR" collectionClass="NSMutableArray" id="XhM-M0-PBb"/>
+                        <outletCollection property="sciFiButtons" destination="4os-nN-nMT" collectionClass="NSMutableArray" id="Dgn-DV-Wki"/>
+                        <outletCollection property="sciFiButtons" destination="j2x-eC-5uS" collectionClass="NSMutableArray" id="NwB-l2-zTN"/>
+                        <outletCollection property="sciFiButtons" destination="mcw-dH-yQ1" collectionClass="NSMutableArray" id="8fT-NL-dMg"/>
+                        <outletCollection property="sciFiButtons" destination="WdP-DY-Ngv" collectionClass="NSMutableArray" id="XoA-bv-1CL"/>
+                        <outletCollection property="sciFiButtons" destination="HzH-E1-FbM" collectionClass="NSMutableArray" id="eSj-im-Dba"/>
+                        <outletCollection property="sciFiButtons" destination="2mg-dn-2PA" collectionClass="NSMutableArray" id="dee-Z3-WM6"/>
+                        <outletCollection property="sciFiButtons" destination="Peb-zv-XK5" collectionClass="NSMutableArray" id="Eqd-Gs-KVV"/>
+                        <outletCollection property="sciFiButtons" destination="vGT-Fl-ekN" collectionClass="NSMutableArray" id="IR5-nX-2gO"/>
+                        <outletCollection property="sciFiButtons" destination="6eV-xn-mUa" collectionClass="NSMutableArray" id="Uea-jF-GNL"/>
+                        <outletCollection property="sciFiButtons" destination="FvP-th-Zb8" collectionClass="NSMutableArray" id="wWX-Fb-GeB"/>
+                        <outletCollection property="sciFiButtons" destination="8nw-ag-EJG" collectionClass="NSMutableArray" id="7ES-3w-rIO"/>
+                        <outletCollection property="sciFiButtons" destination="JXR-e1-5SR" collectionClass="NSMutableArray" id="TAX-KN-dUY"/>
+                        <outletCollection property="sciFiButtons" destination="EBn-EA-Tpt" collectionClass="NSMutableArray" id="jS8-qr-rjh"/>
+                        <outletCollection property="sciFiButtons" destination="Yuq-UU-so7" collectionClass="NSMutableArray" id="KFS-SZ-9WA"/>
+                        <outletCollection property="sciFiButtons" destination="Z2r-q2-GnO" collectionClass="NSMutableArray" id="uvh-pG-LqG"/>
+                        <outletCollection property="sciFiButtons" destination="VoM-XY-lSn" collectionClass="NSMutableArray" id="c6L-5d-5pQ"/>
+                        <outletCollection property="sciFiButtons" destination="WVr-4p-GeY" collectionClass="NSMutableArray" id="K0h-9q-haj"/>
+                        <outletCollection property="sciFiButtons" destination="8qu-Pa-3n8" collectionClass="NSMutableArray" id="X4r-y5-uAP"/>
+                        <outletCollection property="sciFiButtons" destination="Wrj-YM-vJx" collectionClass="NSMutableArray" id="qrJ-ni-oj1"/>
+                        <outletCollection property="sciFiButtons" destination="d6L-5N-04P" collectionClass="NSMutableArray" id="b2F-MK-PVB"/>
+                        <outletCollection property="sciFiButtons" destination="acY-ir-85D" collectionClass="NSMutableArray" id="aIX-e8-mtK"/>
+                        <outletCollection property="sciFiButtons" destination="OCw-ox-Z2H" collectionClass="NSMutableArray" id="jJO-fi-nyu"/>
+                        <outletCollection property="sciFiButtons" destination="BQ5-6q-9oW" collectionClass="NSMutableArray" id="QB5-kD-FBs"/>
+                        <outletCollection property="sciFiButtons" destination="KMl-i8-oRB" collectionClass="NSMutableArray" id="sCs-Uf-TYI"/>
+                        <outletCollection property="sciFiButtons" destination="dhb-fg-YGS" collectionClass="NSMutableArray" id="jWF-wu-Kax"/>
+                        <outletCollection property="sciFiButtons" destination="saB-vi-X2D" collectionClass="NSMutableArray" id="Gvm-dP-l3l"/>
+                        <outletCollection property="sciFiButtons" destination="Iid-P2-ZXF" collectionClass="NSMutableArray" id="ksj-Qy-wED"/>
+                        <outletCollection property="sciFiButtons" destination="xOh-zg-5zX" collectionClass="NSMutableArray" id="hUZ-Oy-cOC"/>
+                        <outletCollection property="sciFiButtons" destination="hJj-SM-g8d" collectionClass="NSMutableArray" id="dKE-Is-bDs"/>
+                        <outletCollection property="sciFiButtons" destination="qqp-yS-mbr" collectionClass="NSMutableArray" id="x6C-a1-0cw"/>
+                        <outletCollection property="sciFiButtons" destination="Pth-nr-n6t" collectionClass="NSMutableArray" id="C4w-Qp-PCD"/>
+                        <outletCollection property="sciFiButtons" destination="Igx-vq-jbm" collectionClass="NSMutableArray" id="7aB-TZ-7VX"/>
+                        <outletCollection property="sciFiButtons" destination="T6H-62-dCF" collectionClass="NSMutableArray" id="3fE-HG-a4W"/>
+                        <outletCollection property="sciFiButtons" destination="VEg-nR-oHR" collectionClass="NSMutableArray" id="guR-Kc-SuG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wJZ-YC-49W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="EWB-bI-jKx" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="845.75892857142856"/>
         </scene>
@@ -281,6 +478,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="bME-4m-gsf" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="KPP-u0-aai">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>

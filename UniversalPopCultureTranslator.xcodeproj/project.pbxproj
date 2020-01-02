@@ -7,13 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C1014F1023BE7A3C005AE40B /* Futurama1Translator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1014F0F23BE7A3C005AE40B /* Futurama1Translator.swift */; };
 		C144D04523B683CC00022845 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C144D04423B683CC00022845 /* AppDelegate.swift */; };
 		C144D04723B683CC00022845 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C144D04623B683CC00022845 /* SceneDelegate.swift */; };
-		C144D04923B683CC00022845 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C144D04823B683CC00022845 /* ViewController.swift */; };
+		C144D04923B683CC00022845 /* EngToSciFiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C144D04823B683CC00022845 /* EngToSciFiViewController.swift */; };
 		C144D04C23B683CC00022845 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C144D04A23B683CC00022845 /* Main.storyboard */; };
 		C144D04E23B683CD00022845 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C144D04D23B683CD00022845 /* Assets.xcassets */; };
 		C144D05123B683CD00022845 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C144D04F23B683CD00022845 /* LaunchScreen.storyboard */; };
 		C144D05C23B683CE00022845 /* UniversalPopCultureTranslatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C144D05B23B683CE00022845 /* UniversalPopCultureTranslatorTests.swift */; };
+		C1EDE01F23BBB6C000EFD18F /* SciFiToEngViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EDE01E23BBB6C000EFD18F /* SciFiToEngViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,10 +29,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C1014F0F23BE7A3C005AE40B /* Futurama1Translator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Futurama1Translator.swift; sourceTree = "<group>"; };
 		C144D04123B683CC00022845 /* UniversalPopCultureTranslator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UniversalPopCultureTranslator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C144D04423B683CC00022845 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C144D04623B683CC00022845 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C144D04823B683CC00022845 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C144D04823B683CC00022845 /* EngToSciFiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EngToSciFiViewController.swift; sourceTree = "<group>"; };
 		C144D04B23B683CC00022845 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C144D04D23B683CD00022845 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C144D05023B683CD00022845 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -38,6 +41,7 @@
 		C144D05723B683CE00022845 /* UniversalPopCultureTranslatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UniversalPopCultureTranslatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C144D05B23B683CE00022845 /* UniversalPopCultureTranslatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversalPopCultureTranslatorTests.swift; sourceTree = "<group>"; };
 		C144D05D23B683CE00022845 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C1EDE01E23BBB6C000EFD18F /* SciFiToEngViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SciFiToEngViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,9 +83,10 @@
 		C144D04323B683CC00022845 /* UniversalPopCultureTranslator */ = {
 			isa = PBXGroup;
 			children = (
+				C1014F0F23BE7A3C005AE40B /* Futurama1Translator.swift */,
+				C1EDE01D23BBB69E00EFD18F /* View Controllers */,
 				C144D04423B683CC00022845 /* AppDelegate.swift */,
 				C144D04623B683CC00022845 /* SceneDelegate.swift */,
-				C144D04823B683CC00022845 /* ViewController.swift */,
 				C144D04A23B683CC00022845 /* Main.storyboard */,
 				C144D04D23B683CD00022845 /* Assets.xcassets */,
 				C144D04F23B683CD00022845 /* LaunchScreen.storyboard */,
@@ -97,6 +102,15 @@
 				C144D05D23B683CE00022845 /* Info.plist */,
 			);
 			path = UniversalPopCultureTranslatorTests;
+			sourceTree = "<group>";
+		};
+		C1EDE01D23BBB69E00EFD18F /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C144D04823B683CC00022845 /* EngToSciFiViewController.swift */,
+				C1EDE01E23BBB6C000EFD18F /* SciFiToEngViewController.swift */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,9 +214,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C144D04923B683CC00022845 /* ViewController.swift in Sources */,
+				C144D04923B683CC00022845 /* EngToSciFiViewController.swift in Sources */,
 				C144D04523B683CC00022845 /* AppDelegate.swift in Sources */,
 				C144D04723B683CC00022845 /* SceneDelegate.swift in Sources */,
+				C1014F1023BE7A3C005AE40B /* Futurama1Translator.swift in Sources */,
+				C1EDE01F23BBB6C000EFD18F /* SciFiToEngViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
