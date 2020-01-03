@@ -12,7 +12,89 @@ struct FictionalLanguages {
     
     let languageName: String
     
-    static func translate(for tag: Int) -> String {
+    static func translateCharacters(for input: String.Element) -> String {
+        var char: String
+        switch input {
+        case "0":
+            char = "00Zero"
+        case "1":
+            char = "01One"
+        case "2":
+            char = "02Two"
+        case "3":
+            char = "03Three"
+        case "4":
+            char = "04Four"
+        case "5":
+            char = "05Five"
+        case "6":
+            char = "06Six"
+        case "7":
+            char = "07Seven"
+        case "8":
+            char = "08Eight"
+        case "9":
+            char = "09Nine"
+        case "a":
+            char = "10A"
+        case "b":
+            char = "11B"
+        case "c":
+            char = "12C"
+        case "d":
+            char = "13D"
+        case "e":
+            char = "14E"
+        case "f":
+            char = "15F"
+        case "g":
+            char = "16G"
+        case "h":
+            char = "17H"
+        case "i":
+            char = "18I"
+        case "j":
+            char = "19J"
+        case "k":
+            char = "20K"
+        case "l":
+            char = "21L"
+        case "m":
+            char = "22M"
+        case "n":
+            char = "23N"
+        case "o":
+            char = "24O"
+        case "p":
+            char = "25P"
+        case "q":
+            char = "26Q"
+        case "r":
+            char = "27R"
+        case "s":
+            char = "28S"
+        case "t":
+            char = "29T"
+        case "u":
+            char = "30U"
+        case "v":
+            char = "31V"
+        case "w":
+            char = "32W"
+        case "x":
+            char = "33X"
+        case "y":
+            char = "34Y"
+        case "z":
+            char = "35Z"
+        case " ":
+            char = "100Space"
+        default:
+            char = "?"
+        }
+        return char
+    }
+    static func translateFromTag(for tag: Int) -> String {
         var char: String
         switch tag {
         case 0:

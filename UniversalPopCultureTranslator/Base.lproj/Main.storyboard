@@ -10,7 +10,7 @@
         <!--Eng -> SciFi-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UniversalPopCultureTranslator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="EngToSciFiViewController" customModule="UniversalPopCultureTranslator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -20,6 +20,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textFieldChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="lQC-hB-dIj"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Universal Pop Culture Translator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dA8-bg-Xne">
                                 <rect key="frame" x="20" y="44" width="374" height="42"/>
@@ -42,12 +45,15 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Eng -&gt; SciFi" image="doc.text" catalog="system" id="bpb-KX-nG3"/>
+                    <connections>
+                        <outlet property="translatedTextView" destination="J6v-RQ-NGB" id="tt4-1A-O65"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="114.50892857142857"/>
         </scene>
-        <!--SciFi -> Eng-->
+        <!--Sci Fi To Eng View Controller-->
         <scene sceneID="4jF-yD-5WU">
             <objects>
                 <viewController id="wZc-gG-3Wo" customClass="SciFiToEngViewController" customModule="UniversalPopCultureTranslator" customModuleProvider="target" sceneMemberID="viewController">
@@ -387,7 +393,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SciFi to English" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pFM-dh-Lrz">
-                                <rect key="frame" x="10" y="54" width="121" height="21"/>
+                                <rect key="frame" x="10" y="98" width="121" height="21"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -399,7 +405,7 @@
                                 </constraints>
                             </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a Language:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zby-Ct-zy5">
-                                <rect key="frame" x="10" y="85" width="109" height="15"/>
+                                <rect key="frame" x="10" y="129" width="109" height="15"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -423,7 +429,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="f6H-01-eLV"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="SciFi -&gt; Eng" image="doc.text.fill" catalog="system" id="MsP-ab-gUZ"/>
+                    <navigationItem key="navigationItem" id="xNQ-5h-Ids">
+                        <barButtonItem key="rightBarButtonItem" title="Alt View" id="Nxz-KV-zv1">
+                            <connections>
+                                <segue destination="UC0-gD-Bw7" kind="show" id="IJy-QA-xe3"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="languagePicker" destination="rn1-jb-2t6" id="cyw-K2-Qhq"/>
                         <outlet property="translatedTextView" destination="Bwf-LF-YxP" id="LMt-sD-Jcc"/>
@@ -463,14 +475,38 @@
                         <outletCollection property="sciFiButtons" destination="qqp-yS-mbr" collectionClass="NSMutableArray" id="x6C-a1-0cw"/>
                         <outletCollection property="sciFiButtons" destination="Pth-nr-n6t" collectionClass="NSMutableArray" id="C4w-Qp-PCD"/>
                         <outletCollection property="sciFiButtons" destination="Igx-vq-jbm" collectionClass="NSMutableArray" id="7aB-TZ-7VX"/>
-                        <outletCollection property="sciFiButtons" destination="T6H-62-dCF" collectionClass="NSMutableArray" id="3fE-HG-a4W"/>
-                        <outletCollection property="sciFiButtons" destination="VEg-nR-oHR" collectionClass="NSMutableArray" id="guR-Kc-SuG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wJZ-YC-49W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="EWB-bI-jKx" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1047.8260869565217" y="845.75892857142856"/>
+            <point key="canvasLocation" x="1957.9710144927537" y="845.75892857142856"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="fNe-Vr-cy1">
+            <objects>
+                <viewController id="UC0-gD-Bw7" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Idu-x7-KP5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ap1-PX-2ku">
+                                <rect key="frame" x="0.0" y="450" width="414" height="363"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <viewLayoutGuide key="contentLayoutGuide" id="eGt-bE-Qnq"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="O1D-2M-m1K"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="fe1-9q-zCb"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="2iX-hw-2ah"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I0U-9i-0Lp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3149.275362318841" y="844.41964285714278"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="1aF-7G-Arw">
@@ -484,12 +520,31 @@
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="5jm-hN-ZQg"/>
-                        <segue destination="wZc-gG-3Wo" kind="relationship" relationship="viewControllers" id="blc-Iy-Bvu"/>
+                        <segue destination="hbb-On-3sm" kind="relationship" relationship="viewControllers" id="blc-Iy-Bvu"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BXB-b7-KOl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="114.50892857142857"/>
+        </scene>
+        <!--SciFi -> Eng-->
+        <scene sceneID="qKf-dR-HRA">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hbb-On-3sm" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="SciFi -&gt; Eng" image="doc.text.fill" catalog="system" id="MsP-ab-gUZ"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="aYU-La-0Cf">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="wZc-gG-3Wo" kind="relationship" relationship="rootViewController" id="drg-Vh-L0a"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vzK-Yx-xCk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="845.75892857142856"/>
         </scene>
     </scenes>
     <resources>

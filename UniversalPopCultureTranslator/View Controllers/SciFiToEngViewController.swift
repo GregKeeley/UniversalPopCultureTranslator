@@ -31,7 +31,7 @@ class SciFiToEngViewController: UIViewController {
         }
     }
     @IBAction func sciFiButtonPressed(_ sender: UIButton) {
-        translatedText.append(contentsOf: FictionalLanguages.translate(for: sender.tag))
+        translatedText.append(contentsOf: FictionalLanguages.translateFromTag(for: sender.tag))
         translatedTextView.text = translatedText 
     }
     
