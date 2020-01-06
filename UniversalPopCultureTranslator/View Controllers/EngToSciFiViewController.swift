@@ -17,6 +17,7 @@ class EngToSciFiViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadTranslation(for: "00Zero")
+        translatedTextView.delegate = self as? UITextViewDelegate
     }
     
     func loadTranslation(for char: String) {
@@ -31,6 +32,11 @@ class EngToSciFiViewController: UIViewController {
             
         }
         translatedTextView.attributedText = fullString
+    }
+    @IBAction func cancelButtonPressed(_ sender: UIButton) {
+        translatedTextView.resignFirstResponder()
+    
+        dismiss(animated: true)
     }
     @IBAction func textFieldChanged(_ sender: UITextField) {
         translation.removeAll()
@@ -49,5 +55,8 @@ class EngToSciFiViewController: UIViewController {
             translatedTextView.text.removeAll()
         }
     }
+    
+}
+extension EngToSciFiViewController: UITextFieldDelegate {
     
 }

@@ -19,18 +19,11 @@
                                 <rect key="frame" x="20" y="137" width="374" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                 <connections>
                                     <action selector="textFieldChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="lQC-hB-dIj"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Universal Pop Culture Translator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dA8-bg-Xne">
-                                <rect key="frame" x="20" y="44" width="374" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="J6v-RQ-NGB">
                                 <rect key="frame" x="20" y="179" width="374" height="271"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -40,6 +33,21 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7lP-5t-N9O">
+                                <rect key="frame" x="346" y="44" width="48" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancelButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="umV-Yj-OyG"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="English to Fictional Translator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dA8-bg-Xne">
+                                <rect key="frame" x="20" y="82" width="374" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -64,9 +72,12 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a2s-k8-snN">
                                 <rect key="frame" x="10" y="632" width="394" height="171"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6zf-rh-Rlu">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6zf-rh-Rlu">
                                         <rect key="frame" x="8" y="8" width="30" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="kId-oP-a6E"/>
+                                            <constraint firstAttribute="height" constant="30" id="xus-Zs-QzX"/>
+                                        </constraints>
                                         <state key="normal" title="0"/>
                                         <connections>
                                             <action selector="sciFiButton:" destination="EWB-bI-jKx" eventType="touchUpInside" id="SSf-JO-JUn"/>
@@ -74,311 +85,498 @@
                                             <action selector="sciFiButtonPressed:" destination="EWB-bI-jKx" eventType="touchUpInside" id="lhw-dz-WiJ"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8FP-dK-B9R">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8FP-dK-B9R">
                                         <rect key="frame" x="46" y="8" width="30" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="DeW-P7-KyP"/>
+                                            <constraint firstAttribute="height" constant="30" id="YQB-hg-de8"/>
+                                        </constraints>
                                         <state key="normal" title="1"/>
                                         <connections>
                                             <action selector="sciFiButtonPressed:" destination="wZc-gG-3Wo" eventType="touchUpInside" id="byk-DU-9tt"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b6H-wM-ehJ">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b6H-wM-ehJ">
                                         <rect key="frame" x="84" y="8" width="30" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="I9b-XU-L4T"/>
+                                            <constraint firstAttribute="width" constant="30" id="jJt-BZ-J5S"/>
+                                        </constraints>
                                         <state key="normal" title="2"/>
                                         <connections>
                                             <action selector="sciFiButtonPressed:" destination="wZc-gG-3Wo" eventType="touchUpInside" id="Iqf-wt-51a"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vDD-ey-vRR">
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vDD-ey-vRR">
                                         <rect key="frame" x="122" y="8" width="30" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="26Y-iX-JwE"/>
+                                            <constraint firstAttribute="height" constant="30" id="aL0-SE-fAj"/>
+                                        </constraints>
                                         <state key="normal" title="3"/>
                                         <connections>
                                             <action selector="sciFiButtonPressed:" destination="wZc-gG-3Wo" eventType="touchUpInside" id="Nbo-Av-qwY"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j2x-eC-5uS">
+                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j2x-eC-5uS">
                                         <rect key="frame" x="210" y="8" width="30" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="BDV-ab-myQ"/>
+                                            <constraint firstAttribute="width" constant="30" id="w9b-UG-gbz"/>
+                                        </constraints>
                                         <state key="normal" title="5"/>
                                         <connections>
                                             <action selector="sciFiButtonPressed:" destination="wZc-gG-3Wo" eventType="touchUpInside" id="Ovf-G7-aZL"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="6" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mcw-dH-yQ1">
+                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mcw-dH-yQ1">
                                         <rect key="frame" x="248" y="8" width="30" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="FFx-nF-01Q"/>
+                                            <constraint firstAttribute="height" constant="30" id="pQR-Ep-sq9"/>
+                                        </constraints>
                                         <state key="normal" title="6"/>
                                         <connections>
                                             <action selector="sciFiButtonPressed:" destination="wZc-gG-3Wo" eventType="touchUpInside" id="DVt-ZL-ttA"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="7" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WdP-DY-Ngv">
+                                    <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WdP-DY-Ngv">
                                         <rect key="frame" x="286" y="8" width="30" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="bBY-Pi-oMw"/>
+                                            <constraint firstAttribute="width" constant="30" id="stw-Dl-puD"/>
+                                        </constraints>
                                         <state key="normal" title="7"/>
                                         <connections>
                                             <action selector="sciFiButtonPressed:" destination="wZc-gG-3Wo" eventType="touchUpInside" id="KoT-1m-aiL"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="8" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HzH-E1-FbM">
+                                    <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HzH-E1-FbM">
                                         <rect key="frame" x="324" y="8" width="30" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="SFX-g6-cB7"/>
+                                            <constraint firstAttribute="width" constant="30" id="rKZ-cb-Xup"/>
+                                        </constraints>
                                         <state key="normal" title="8"/>
                                         <connections>
                                             <action selector="sciFiButtonPressed:" destination="wZc-gG-3Wo" eventType="touchUpInside" id="0OZ-to-fI9"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="9" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2mg-dn-2PA">
+                                    <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2mg-dn-2PA">
                                         <rect key="frame" x="362" y="8" width="30" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="QYz-GW-LZp"/>
+                                            <constraint firstAttribute="width" constant="30" id="x7B-zv-QMA"/>
+                                        </constraints>
                                         <state key="normal" title="9"/>
                                         <connections>
                                             <action selector="sciFiButtonPressed:" destination="wZc-gG-3Wo" eventType="touchUpInside" id="3x3-0Y-o5h"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4os-nN-nMT">
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4os-nN-nMT">
                                         <rect key="frame" x="160" y="8" width="30" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="57i-R1-rZA"/>
+                                            <constraint firstAttribute="height" constant="30" id="Tut-xu-GKJ"/>
+                                        </constraints>
                                         <state key="normal" title="4"/>
                                         <connections>
                                             <action selector="sciFiButtonPressed:" destination="wZc-gG-3Wo" eventType="touchUpInside" id="vfy-SL-VXW"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="10" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Peb-zv-XK5">
+                                    <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Peb-zv-XK5">
                                         <rect key="frame" x="10" y="55" width="30" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="8on-w9-TX6"/>
+                                            <constraint firstAttribute="height" constant="30" id="kAY-4j-Z59"/>
+                                        </constraints>
                                         <state key="normal" title="Q"/>
                                         <connections>
                                             <action selector="sciFiButtonPressed:" destination="wZc-gG-3Wo" eventType="touchUpInside" id="ZOy-hW-NjO"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="11" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vGT-Fl-ekN">
+                                    <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vGT-Fl-ekN">
                                         <rect key="frame" x="48" y="55" width="30" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="JbI-US-O9L"/>
+                                            <constraint firstAttribute="width" constant="30" id="aKq-mV-L5p"/>
+                                        </constraints>
                                         <state key="normal" title="W"/>
                                         <connections>
                                             <action selector="sciFiButtonPressed:" destination="wZc-gG-3Wo" eventType="touchUpInside" id="KPl-0s-vRF"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="12" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6eV-xn-mUa">
+                                    <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6eV-xn-mUa">
                                         <rect key="frame" x="86" y="55" width="30" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="I13-Ei-6YS"/>
+                                            <constraint firstAttribute="height" constant="30" id="uN9-K5-Ige"/>
+                                        </constraints>
                                         <state key="normal" title="E"/>
                                         <connections>
                                             <action selector="sciFiButtonPressed:" destination="wZc-gG-3Wo" eventType="touchUpInside" id="tnT-oc-kRR"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="13" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FvP-th-Zb8">
+                                    <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FvP-th-Zb8">
                                         <rect key="frame" x="124" y="55" width="30" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="0C4-Ei-j3t"/>
+                                            <constraint firstAttribute="height" constant="30" id="YIf-jB-TQl"/>
+                                        </constraints>
                                         <state key="normal" title="R"/>
                                         <connections>
                                             <action selector="sciFiButtonPressed:" destination="wZc-gG-3Wo" eventType="touchUpInside" id="eh8-ia-pfU"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="14" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8nw-ag-EJG">
-                                        <rect key="frame" x="162" y="56" width="30" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <state key="normal" title="T">
-                                            <color key="titleColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="sciFiButtonPressed:" destination="wZc-gG-3Wo" eventType="touchUpInside" id="rOI-8v-Nrb"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="15" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JXR-e1-5SR">
+                                    <button opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JXR-e1-5SR">
                                         <rect key="frame" x="200" y="55" width="30" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="r9x-Ho-9hs"/>
+                                            <constraint firstAttribute="height" constant="30" id="zAp-fJ-s4w"/>
+                                        </constraints>
                                         <state key="normal" title="Y"/>
                                         <connections>
                                             <action selector="sciFiButtonPressed:" destination="wZc-gG-3Wo" eventType="touchUpInside" id="I3f-60-wQJ"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="16" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EBn-EA-Tpt">
+                                    <button opaque="NO" tag="16" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EBn-EA-Tpt">
                                         <rect key="frame" x="238" y="55" width="30" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="H0H-v3-knX"/>
+                                            <constraint firstAttribute="width" constant="30" id="PZb-4Y-HGI"/>
+                                        </constraints>
                                         <state key="normal" title="U"/>
                                         <connections>
                                             <action selector="sciFiButtonPressed:" destination="wZc-gG-3Wo" eventType="touchUpInside" id="z0b-Uz-EI6"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="17" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yuq-UU-so7">
+                                    <button opaque="NO" tag="17" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yuq-UU-so7">
                                         <rect key="frame" x="276" y="55" width="30" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="5E4-Da-Qq3"/>
+                                            <constraint firstAttribute="height" constant="30" id="hMp-bf-EVp"/>
+                                        </constraints>
                                         <state key="normal" title="I"/>
                                         <connections>
                                             <action selector="sciFiButtonPressed:" destination="wZc-gG-3Wo" eventType="touchUpInside" id="Rio-KM-2tP"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="18" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z2r-q2-GnO">
+                                    <button opaque="NO" tag="18" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z2r-q2-GnO">
                                         <rect key="frame" x="314" y="55" width="30" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="6BZ-Z5-DZp"/>
+                                            <constraint firstAttribute="height" constant="30" id="f7N-Jb-ehd"/>
+                                        </constraints>
                                         <state key="normal" title="O"/>
                                         <connections>
                                             <action selector="sciFiButtonPressed:" destination="wZc-gG-3Wo" eventType="touchUpInside" id="YHG-JD-5AH"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="19" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VoM-XY-lSn">
+                                    <button opaque="NO" tag="19" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VoM-XY-lSn">
                                         <rect key="frame" x="352" y="55" width="30" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="FGb-EI-nsx"/>
+                                            <constraint firstAttribute="height" constant="30" id="Fuq-sL-D4c"/>
+                                        </constraints>
                                         <state key="normal" title="P"/>
                                         <connections>
                                             <action selector="sciFiButtonPressed:" destination="wZc-gG-3Wo" eventType="touchUpInside" id="0S5-l2-XN3"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="20" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WVr-4p-GeY">
+                                    <button opaque="NO" tag="20" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WVr-4p-GeY">
                                         <rect key="frame" x="29" y="93" width="30" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="3Nx-q9-G3o"/>
+                                            <constraint firstAttribute="width" constant="30" id="AeW-3W-Xmx"/>
+                                        </constraints>
                                         <state key="normal" title="A"/>
                                         <connections>
                                             <action selector="sciFiButtonPressed:" destination="wZc-gG-3Wo" eventType="touchUpInside" id="aAM-fC-O08"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="21" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8qu-Pa-3n8">
+                                    <button opaque="NO" tag="21" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8qu-Pa-3n8">
                                         <rect key="frame" x="67" y="93" width="30" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="cuc-2R-YFF"/>
+                                            <constraint firstAttribute="height" constant="30" id="ztp-vH-jld"/>
+                                        </constraints>
                                         <state key="normal" title="S"/>
                                         <connections>
                                             <action selector="sciFiButtonPressed:" destination="wZc-gG-3Wo" eventType="touchUpInside" id="6oz-KG-4Vl"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="22" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wrj-YM-vJx">
+                                    <button opaque="NO" tag="22" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wrj-YM-vJx">
                                         <rect key="frame" x="105" y="93" width="30" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="QLb-LA-gml"/>
+                                            <constraint firstAttribute="width" constant="30" id="xhN-SQ-eHl"/>
+                                        </constraints>
                                         <state key="normal" title="D"/>
                                         <connections>
                                             <action selector="sciFiButtonPressed:" destination="wZc-gG-3Wo" eventType="touchUpInside" id="Bdw-Kn-Fhv"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="23" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d6L-5N-04P">
+                                    <button opaque="NO" tag="23" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d6L-5N-04P">
                                         <rect key="frame" x="143" y="93" width="30" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="EMV-1Z-ayy"/>
+                                            <constraint firstAttribute="height" constant="30" id="Z66-f1-c5W"/>
+                                        </constraints>
                                         <state key="normal" title="F"/>
                                         <connections>
                                             <action selector="sciFiButtonPressed:" destination="wZc-gG-3Wo" eventType="touchUpInside" id="wjJ-Ij-CN4"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="24" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="acY-ir-85D">
+                                    <button opaque="NO" tag="24" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="acY-ir-85D">
                                         <rect key="frame" x="181" y="93" width="30" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="Puj-EK-7Jf"/>
+                                            <constraint firstAttribute="width" constant="30" id="xoE-Yk-FJ0"/>
+                                        </constraints>
                                         <state key="normal" title="G"/>
                                         <connections>
                                             <action selector="sciFiButtonPressed:" destination="wZc-gG-3Wo" eventType="touchUpInside" id="Gfd-eT-VRE"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="25" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OCw-ox-Z2H">
+                                    <button opaque="NO" tag="25" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OCw-ox-Z2H">
                                         <rect key="frame" x="219" y="93" width="30" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="DfU-sl-k1P"/>
+                                            <constraint firstAttribute="width" constant="30" id="N04-9X-VnQ"/>
+                                        </constraints>
                                         <state key="normal" title="H"/>
                                         <connections>
                                             <action selector="sciFiButtonPressed:" destination="wZc-gG-3Wo" eventType="touchUpInside" id="qBB-YI-gIh"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="26" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BQ5-6q-9oW">
+                                    <button opaque="NO" tag="26" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BQ5-6q-9oW">
                                         <rect key="frame" x="257" y="93" width="30" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="E0a-f3-jeQ"/>
+                                            <constraint firstAttribute="width" constant="30" id="cfs-km-T8p"/>
+                                        </constraints>
                                         <state key="normal" title="J"/>
                                         <connections>
                                             <action selector="sciFiButtonPressed:" destination="wZc-gG-3Wo" eventType="touchUpInside" id="l2Y-dx-NkT"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="27" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KMl-i8-oRB">
+                                    <button opaque="NO" tag="27" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KMl-i8-oRB">
                                         <rect key="frame" x="295" y="93" width="30" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="bf8-mv-mAu"/>
+                                            <constraint firstAttribute="height" constant="30" id="irg-h8-Gfo"/>
+                                        </constraints>
                                         <state key="normal" title="K"/>
                                         <connections>
                                             <action selector="sciFiButtonPressed:" destination="wZc-gG-3Wo" eventType="touchUpInside" id="YMI-nU-z3z"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="28" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dhb-fg-YGS">
+                                    <button opaque="NO" tag="28" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dhb-fg-YGS">
                                         <rect key="frame" x="333" y="93" width="30" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="RJu-ub-zMc"/>
+                                            <constraint firstAttribute="width" constant="30" id="ocy-8e-51M"/>
+                                        </constraints>
                                         <state key="normal" title="L"/>
                                         <connections>
                                             <action selector="sciFiButtonPressed:" destination="wZc-gG-3Wo" eventType="touchUpInside" id="r8J-BY-jU0"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="100" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VEg-nR-oHR">
+                                    <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VEg-nR-oHR">
                                         <rect key="frame" x="339" y="133" width="47" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="Zhj-7U-QEK"/>
+                                            <constraint firstAttribute="width" constant="47" id="lcb-Sc-5wX"/>
+                                        </constraints>
                                         <state key="normal" title="SPACE"/>
                                         <connections>
                                             <action selector="sciFiButtonPressed:" destination="wZc-gG-3Wo" eventType="touchUpInside" id="iC5-q9-NMH"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="100" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T6H-62-dCF">
+                                    <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T6H-62-dCF">
                                         <rect key="frame" x="8" y="133" width="47" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="47" id="415-mO-WHp"/>
+                                            <constraint firstAttribute="height" constant="30" id="U5d-zp-PVd"/>
+                                        </constraints>
                                         <state key="normal" title="SPACE"/>
                                         <connections>
                                             <action selector="sciFiButtonPressed:" destination="wZc-gG-3Wo" eventType="touchUpInside" id="rwb-KE-0Ga"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="29" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="saB-vi-X2D">
+                                    <button opaque="NO" tag="29" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="saB-vi-X2D">
                                         <rect key="frame" x="67" y="133" width="30" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="IlG-eU-HuL"/>
+                                            <constraint firstAttribute="width" constant="30" id="uzA-VD-ti8"/>
+                                        </constraints>
                                         <state key="normal" title="Z"/>
                                         <connections>
                                             <action selector="sciFiButtonPressed:" destination="wZc-gG-3Wo" eventType="touchUpInside" id="PAm-rf-pp1"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="30" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iid-P2-ZXF">
+                                    <button opaque="NO" tag="30" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iid-P2-ZXF">
                                         <rect key="frame" x="105" y="133" width="30" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="Qv0-Jd-vDr"/>
+                                            <constraint firstAttribute="width" constant="30" id="aVe-6K-Xos"/>
+                                        </constraints>
                                         <state key="normal" title="X"/>
                                         <connections>
                                             <action selector="sciFiButtonPressed:" destination="wZc-gG-3Wo" eventType="touchUpInside" id="goj-TJ-PoC"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="31" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xOh-zg-5zX">
+                                    <button opaque="NO" tag="31" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xOh-zg-5zX">
                                         <rect key="frame" x="143" y="133" width="30" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="2aE-3i-JZ7"/>
+                                            <constraint firstAttribute="width" constant="30" id="Bxd-Zv-ihE"/>
+                                        </constraints>
                                         <state key="normal" title="C"/>
                                         <connections>
                                             <action selector="sciFiButtonPressed:" destination="wZc-gG-3Wo" eventType="touchUpInside" id="jq7-9h-86g"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="32" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hJj-SM-g8d">
+                                    <button opaque="NO" tag="32" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hJj-SM-g8d">
                                         <rect key="frame" x="181" y="133" width="30" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="Uzg-Oo-9iY"/>
+                                            <constraint firstAttribute="width" constant="30" id="rx8-Q8-idN"/>
+                                        </constraints>
                                         <state key="normal" title="V"/>
                                         <connections>
                                             <action selector="sciFiButtonPressed:" destination="wZc-gG-3Wo" eventType="touchUpInside" id="SNc-xe-esQ"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="33" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qqp-yS-mbr">
+                                    <button opaque="NO" tag="33" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qqp-yS-mbr">
                                         <rect key="frame" x="219" y="133" width="30" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="VPS-rG-ceP"/>
+                                            <constraint firstAttribute="width" constant="30" id="nUo-RH-eQ1"/>
+                                        </constraints>
                                         <state key="normal" title="B"/>
                                         <connections>
                                             <action selector="sciFiButtonPressed:" destination="wZc-gG-3Wo" eventType="touchUpInside" id="MIR-BF-pe3"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="34" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pth-nr-n6t">
+                                    <button opaque="NO" tag="34" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pth-nr-n6t">
                                         <rect key="frame" x="257" y="133" width="30" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="YP4-hX-B3O"/>
+                                            <constraint firstAttribute="width" constant="30" id="dW2-GW-Vse"/>
+                                        </constraints>
                                         <state key="normal" title="N"/>
                                         <connections>
                                             <action selector="sciFiButtonPressed:" destination="wZc-gG-3Wo" eventType="touchUpInside" id="DuO-J7-WC4"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="35" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Igx-vq-jbm">
+                                    <button opaque="NO" tag="35" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Igx-vq-jbm">
                                         <rect key="frame" x="295" y="133" width="30" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="4Tf-cX-baC"/>
+                                            <constraint firstAttribute="height" constant="30" id="GdO-9n-K4T"/>
+                                        </constraints>
                                         <state key="normal" title="M"/>
                                         <connections>
                                             <action selector="sciFiButtonPressed:" destination="wZc-gG-3Wo" eventType="touchUpInside" id="NlK-ig-iW4"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ri0-bt-Jb4">
+                                        <rect key="frame" x="160" y="55" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="KoL-Y0-ZYb"/>
+                                            <constraint firstAttribute="height" constant="30" id="VUg-Xl-WeM"/>
+                                        </constraints>
+                                        <state key="normal" title="T"/>
+                                        <connections>
+                                            <action selector="sciFiButtonPressed:" destination="wZc-gG-3Wo" eventType="touchUpInside" id="YPu-YO-HZT"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="2mg-dn-2PA" secondAttribute="trailing" constant="2" id="0Tm-9K-e0J"/>
+                                    <constraint firstItem="xOh-zg-5zX" firstAttribute="leading" secondItem="Iid-P2-ZXF" secondAttribute="trailing" constant="8" id="16J-Lc-78I"/>
+                                    <constraint firstItem="KMl-i8-oRB" firstAttribute="leading" secondItem="BQ5-6q-9oW" secondAttribute="trailing" constant="8" id="3GV-sz-Lj5"/>
+                                    <constraint firstItem="vDD-ey-vRR" firstAttribute="top" secondItem="a2s-k8-snN" secondAttribute="top" constant="8" id="5qs-Bd-abH"/>
+                                    <constraint firstItem="xOh-zg-5zX" firstAttribute="top" secondItem="d6L-5N-04P" secondAttribute="bottom" constant="10" id="5yo-zd-iRt"/>
+                                    <constraint firstItem="saB-vi-X2D" firstAttribute="leading" secondItem="T6H-62-dCF" secondAttribute="trailing" constant="12" id="63z-Ww-XYC"/>
+                                    <constraint firstItem="FvP-th-Zb8" firstAttribute="leading" secondItem="6eV-xn-mUa" secondAttribute="trailing" constant="8" id="6YR-tl-W2S"/>
+                                    <constraint firstItem="WVr-4p-GeY" firstAttribute="leading" secondItem="a2s-k8-snN" secondAttribute="leading" constant="29" id="76B-1b-kj1"/>
+                                    <constraint firstItem="WVr-4p-GeY" firstAttribute="top" secondItem="vGT-Fl-ekN" secondAttribute="bottom" constant="8" id="7gy-bd-k2G"/>
+                                    <constraint firstItem="8qu-Pa-3n8" firstAttribute="top" secondItem="6eV-xn-mUa" secondAttribute="bottom" constant="8" id="8kx-bi-1oO"/>
+                                    <constraint firstItem="WdP-DY-Ngv" firstAttribute="leading" secondItem="mcw-dH-yQ1" secondAttribute="trailing" constant="8" id="9N7-1V-efP"/>
+                                    <constraint firstItem="EBn-EA-Tpt" firstAttribute="leading" secondItem="JXR-e1-5SR" secondAttribute="trailing" constant="8" id="AKE-it-EWm"/>
+                                    <constraint firstItem="Pth-nr-n6t" firstAttribute="leading" secondItem="qqp-yS-mbr" secondAttribute="trailing" constant="8" id="B9w-W8-Zvj"/>
+                                    <constraint firstItem="Wrj-YM-vJx" firstAttribute="leading" secondItem="8qu-Pa-3n8" secondAttribute="trailing" constant="8" id="CVq-Ol-Nk7"/>
+                                    <constraint firstItem="8FP-dK-B9R" firstAttribute="leading" secondItem="6zf-rh-Rlu" secondAttribute="trailing" constant="8" id="CXx-5F-50I"/>
+                                    <constraint firstItem="WdP-DY-Ngv" firstAttribute="top" secondItem="a2s-k8-snN" secondAttribute="top" constant="8" id="Cm2-hQ-bi1"/>
+                                    <constraint firstItem="VoM-XY-lSn" firstAttribute="leading" secondItem="Z2r-q2-GnO" secondAttribute="trailing" constant="8" id="DhP-dx-YAa"/>
+                                    <constraint firstItem="T6H-62-dCF" firstAttribute="top" secondItem="WVr-4p-GeY" secondAttribute="bottom" constant="10" id="EdW-bY-7sF"/>
+                                    <constraint firstItem="qqp-yS-mbr" firstAttribute="top" secondItem="OCw-ox-Z2H" secondAttribute="bottom" constant="10" id="ElB-hs-N57"/>
+                                    <constraint firstAttribute="trailing" secondItem="VEg-nR-oHR" secondAttribute="trailing" constant="8" id="F1S-Az-aCn"/>
+                                    <constraint firstItem="Iid-P2-ZXF" firstAttribute="top" secondItem="Wrj-YM-vJx" secondAttribute="bottom" constant="10" id="FG2-Cb-G8J"/>
+                                    <constraint firstItem="mcw-dH-yQ1" firstAttribute="top" secondItem="a2s-k8-snN" secondAttribute="top" constant="8" id="Gh5-mg-7y9"/>
+                                    <constraint firstItem="Igx-vq-jbm" firstAttribute="top" secondItem="KMl-i8-oRB" secondAttribute="bottom" constant="10" id="HFg-CH-hX2"/>
+                                    <constraint firstItem="VEg-nR-oHR" firstAttribute="leading" secondItem="Igx-vq-jbm" secondAttribute="trailing" constant="14" id="IgJ-Rd-JBn"/>
+                                    <constraint firstAttribute="bottom" secondItem="qqp-yS-mbr" secondAttribute="bottom" constant="8" id="JPY-z3-0cT"/>
+                                    <constraint firstItem="KMl-i8-oRB" firstAttribute="top" secondItem="Z2r-q2-GnO" secondAttribute="bottom" constant="8" id="Jib-Et-bs9"/>
+                                    <constraint firstAttribute="trailing" secondItem="dhb-fg-YGS" secondAttribute="trailing" constant="31" id="M9u-CU-6eJ"/>
+                                    <constraint firstItem="b6H-wM-ehJ" firstAttribute="leading" secondItem="8FP-dK-B9R" secondAttribute="trailing" constant="8" id="MMK-vZ-XVN"/>
+                                    <constraint firstItem="HzH-E1-FbM" firstAttribute="leading" secondItem="WdP-DY-Ngv" secondAttribute="trailing" constant="8" id="MlN-Xe-jkE"/>
+                                    <constraint firstItem="HzH-E1-FbM" firstAttribute="top" secondItem="a2s-k8-snN" secondAttribute="top" constant="8" id="Ofg-I5-R3r"/>
+                                    <constraint firstItem="VEg-nR-oHR" firstAttribute="top" secondItem="dhb-fg-YGS" secondAttribute="bottom" constant="10" id="Pp1-Gh-33F"/>
+                                    <constraint firstItem="6eV-xn-mUa" firstAttribute="leading" secondItem="vGT-Fl-ekN" secondAttribute="trailing" constant="8" id="PyL-t9-RJV"/>
+                                    <constraint firstItem="dhb-fg-YGS" firstAttribute="leading" secondItem="KMl-i8-oRB" secondAttribute="trailing" constant="8" id="QBh-2W-S9l"/>
+                                    <constraint firstItem="4os-nN-nMT" firstAttribute="leading" secondItem="vDD-ey-vRR" secondAttribute="trailing" constant="8" id="Qd3-Kx-vOr"/>
+                                    <constraint firstItem="8FP-dK-B9R" firstAttribute="top" secondItem="a2s-k8-snN" secondAttribute="top" constant="8" id="Qfr-0P-dHe"/>
+                                    <constraint firstAttribute="bottom" secondItem="saB-vi-X2D" secondAttribute="bottom" constant="8" id="SXV-Sc-VW1"/>
+                                    <constraint firstItem="hJj-SM-g8d" firstAttribute="leading" secondItem="xOh-zg-5zX" secondAttribute="trailing" constant="8" id="Tdg-Zi-W8V"/>
+                                    <constraint firstItem="6zf-rh-Rlu" firstAttribute="leading" secondItem="a2s-k8-snN" secondAttribute="leading" constant="8" id="Tfb-wc-GxX"/>
+                                    <constraint firstItem="qqp-yS-mbr" firstAttribute="leading" secondItem="hJj-SM-g8d" secondAttribute="trailing" constant="8" id="UE0-0C-Hc1"/>
+                                    <constraint firstItem="BQ5-6q-9oW" firstAttribute="top" secondItem="Yuq-UU-so7" secondAttribute="bottom" constant="8" id="UWw-mh-KY0"/>
+                                    <constraint firstItem="acY-ir-85D" firstAttribute="top" secondItem="JXR-e1-5SR" secondAttribute="bottom" constant="8" id="UxW-bI-Ikp"/>
+                                    <constraint firstAttribute="bottom" secondItem="Igx-vq-jbm" secondAttribute="bottom" constant="8" id="W6x-ha-ho3"/>
+                                    <constraint firstItem="d6L-5N-04P" firstAttribute="leading" secondItem="Wrj-YM-vJx" secondAttribute="trailing" constant="8" id="WH1-Zb-ueO"/>
+                                    <constraint firstItem="vDD-ey-vRR" firstAttribute="leading" secondItem="b6H-wM-ehJ" secondAttribute="trailing" constant="8" id="XUg-wf-NXW"/>
+                                    <constraint firstItem="Wrj-YM-vJx" firstAttribute="top" secondItem="FvP-th-Zb8" secondAttribute="bottom" constant="8" id="XZH-fK-NGl"/>
+                                    <constraint firstItem="4os-nN-nMT" firstAttribute="top" secondItem="a2s-k8-snN" secondAttribute="top" constant="8" id="Y1b-bd-uY0"/>
+                                    <constraint firstAttribute="bottom" secondItem="Pth-nr-n6t" secondAttribute="bottom" constant="8" id="YFS-qm-I4x"/>
+                                    <constraint firstItem="Pth-nr-n6t" firstAttribute="top" secondItem="BQ5-6q-9oW" secondAttribute="bottom" constant="10" id="YP5-Ji-ySh"/>
+                                    <constraint firstItem="j2x-eC-5uS" firstAttribute="top" secondItem="a2s-k8-snN" secondAttribute="top" constant="8" id="aOV-PX-cLn"/>
+                                    <constraint firstAttribute="bottom" secondItem="xOh-zg-5zX" secondAttribute="bottom" constant="8" id="dK3-pA-CjT"/>
+                                    <constraint firstItem="JXR-e1-5SR" firstAttribute="leading" secondItem="Ri0-bt-Jb4" secondAttribute="trailing" constant="10" id="fJB-qR-5op"/>
+                                    <constraint firstItem="vGT-Fl-ekN" firstAttribute="leading" secondItem="Peb-zv-XK5" secondAttribute="trailing" constant="8" id="fee-uO-QC1"/>
+                                    <constraint firstAttribute="bottom" secondItem="VEg-nR-oHR" secondAttribute="bottom" constant="8" id="fqp-XS-tVI"/>
+                                    <constraint firstItem="2mg-dn-2PA" firstAttribute="top" secondItem="a2s-k8-snN" secondAttribute="top" constant="8" id="guc-RI-qbA"/>
+                                    <constraint firstItem="8qu-Pa-3n8" firstAttribute="leading" secondItem="WVr-4p-GeY" secondAttribute="trailing" constant="8" id="hG0-Fg-Lph"/>
+                                    <constraint firstItem="saB-vi-X2D" firstAttribute="top" secondItem="8qu-Pa-3n8" secondAttribute="bottom" constant="10" id="hQE-wr-SYo"/>
+                                    <constraint firstItem="Peb-zv-XK5" firstAttribute="leading" secondItem="a2s-k8-snN" secondAttribute="leading" constant="10" id="han-Vs-RU8"/>
+                                    <constraint firstItem="2mg-dn-2PA" firstAttribute="leading" secondItem="HzH-E1-FbM" secondAttribute="trailing" constant="8" id="hl4-go-5Ew"/>
+                                    <constraint firstItem="hJj-SM-g8d" firstAttribute="top" secondItem="acY-ir-85D" secondAttribute="bottom" constant="10" id="hwE-xv-KQM"/>
+                                    <constraint firstItem="6zf-rh-Rlu" firstAttribute="top" secondItem="a2s-k8-snN" secondAttribute="top" constant="8" id="jCg-1W-krF"/>
+                                    <constraint firstItem="d6L-5N-04P" firstAttribute="top" secondItem="Ri0-bt-Jb4" secondAttribute="bottom" constant="8" id="jWk-RB-Wqf"/>
                                     <constraint firstAttribute="height" constant="171" id="jgH-Ky-GcH"/>
+                                    <constraint firstItem="Ri0-bt-Jb4" firstAttribute="leading" secondItem="FvP-th-Zb8" secondAttribute="trailing" constant="6" id="k0V-P4-kzK"/>
+                                    <constraint firstItem="acY-ir-85D" firstAttribute="leading" secondItem="d6L-5N-04P" secondAttribute="trailing" constant="8" id="kdk-d1-ZOV"/>
+                                    <constraint firstAttribute="trailing" secondItem="VoM-XY-lSn" secondAttribute="trailing" constant="12" id="nFv-qz-UxH"/>
+                                    <constraint firstItem="mcw-dH-yQ1" firstAttribute="leading" secondItem="j2x-eC-5uS" secondAttribute="trailing" constant="8" id="nUW-cO-VsU"/>
+                                    <constraint firstItem="OCw-ox-Z2H" firstAttribute="top" secondItem="EBn-EA-Tpt" secondAttribute="bottom" constant="8" id="ncw-Xj-NbW"/>
+                                    <constraint firstAttribute="bottom" secondItem="T6H-62-dCF" secondAttribute="bottom" constant="8" id="pBy-m7-jTy"/>
+                                    <constraint firstAttribute="bottom" secondItem="Iid-P2-ZXF" secondAttribute="bottom" constant="8" id="qiO-WU-z8d"/>
+                                    <constraint firstItem="WVr-4p-GeY" firstAttribute="top" secondItem="Peb-zv-XK5" secondAttribute="bottom" constant="8" id="rZM-sE-DPq"/>
+                                    <constraint firstItem="OCw-ox-Z2H" firstAttribute="leading" secondItem="acY-ir-85D" secondAttribute="trailing" constant="8" id="rZa-6d-Qeh"/>
+                                    <constraint firstItem="T6H-62-dCF" firstAttribute="leading" secondItem="a2s-k8-snN" secondAttribute="leading" constant="8" id="sTi-sh-WqW"/>
+                                    <constraint firstItem="b6H-wM-ehJ" firstAttribute="top" secondItem="a2s-k8-snN" secondAttribute="top" constant="8" id="uKF-GR-mbQ"/>
+                                    <constraint firstItem="BQ5-6q-9oW" firstAttribute="leading" secondItem="OCw-ox-Z2H" secondAttribute="trailing" constant="8" id="ulq-9N-b8h"/>
+                                    <constraint firstItem="Iid-P2-ZXF" firstAttribute="leading" secondItem="saB-vi-X2D" secondAttribute="trailing" constant="8" id="v3O-hS-JYN"/>
+                                    <constraint firstItem="Yuq-UU-so7" firstAttribute="leading" secondItem="EBn-EA-Tpt" secondAttribute="trailing" constant="8" id="v5Y-xu-hsJ"/>
+                                    <constraint firstItem="dhb-fg-YGS" firstAttribute="top" secondItem="VoM-XY-lSn" secondAttribute="bottom" constant="8" id="vtw-hz-avJ"/>
+                                    <constraint firstAttribute="bottom" secondItem="hJj-SM-g8d" secondAttribute="bottom" constant="8" id="wBl-Zz-fdK"/>
+                                    <constraint firstItem="Igx-vq-jbm" firstAttribute="leading" secondItem="Pth-nr-n6t" secondAttribute="trailing" constant="8" id="ySE-5G-egi"/>
+                                    <constraint firstItem="Z2r-q2-GnO" firstAttribute="leading" secondItem="Yuq-UU-so7" secondAttribute="trailing" constant="8" id="zvV-mp-sdi"/>
                                 </constraints>
                             </view>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Bwf-LF-YxP">
@@ -453,7 +651,6 @@
                         <outletCollection property="sciFiButtons" destination="vGT-Fl-ekN" collectionClass="NSMutableArray" id="IR5-nX-2gO"/>
                         <outletCollection property="sciFiButtons" destination="6eV-xn-mUa" collectionClass="NSMutableArray" id="Uea-jF-GNL"/>
                         <outletCollection property="sciFiButtons" destination="FvP-th-Zb8" collectionClass="NSMutableArray" id="wWX-Fb-GeB"/>
-                        <outletCollection property="sciFiButtons" destination="8nw-ag-EJG" collectionClass="NSMutableArray" id="7ES-3w-rIO"/>
                         <outletCollection property="sciFiButtons" destination="JXR-e1-5SR" collectionClass="NSMutableArray" id="TAX-KN-dUY"/>
                         <outletCollection property="sciFiButtons" destination="EBn-EA-Tpt" collectionClass="NSMutableArray" id="jS8-qr-rjh"/>
                         <outletCollection property="sciFiButtons" destination="Yuq-UU-so7" collectionClass="NSMutableArray" id="KFS-SZ-9WA"/>
@@ -475,6 +672,7 @@
                         <outletCollection property="sciFiButtons" destination="qqp-yS-mbr" collectionClass="NSMutableArray" id="x6C-a1-0cw"/>
                         <outletCollection property="sciFiButtons" destination="Pth-nr-n6t" collectionClass="NSMutableArray" id="C4w-Qp-PCD"/>
                         <outletCollection property="sciFiButtons" destination="Igx-vq-jbm" collectionClass="NSMutableArray" id="7aB-TZ-7VX"/>
+                        <outletCollection property="sciFiButtons" destination="Ri0-bt-Jb4" collectionClass="NSMutableArray" id="fxf-xi-8Dx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wJZ-YC-49W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
