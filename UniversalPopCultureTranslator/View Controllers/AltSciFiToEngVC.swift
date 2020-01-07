@@ -8,31 +8,27 @@
 
 import UIKit
 
-class AltSciFiToEngVC: UITableViewController {
+class AltSciFiToEngVC: UIViewController {
 
-    @IBOutlet weak var sciFiAlphabetCollection: UICollectionView!
+    @IBOutlet var sciFiAlphabetCollection: UIScrollView!
+    @IBOutlet var sciFiButtons: [UIButton]!
     
     var currentLanguage: FictionalLanguages?
     var translatedText = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        sciFiAlphabetCollection.dataSource = self
-        sciFiAlphabetCollection.delegate = self
+        loadKeyboard()
+        sciFiAlphabetCollection = UIScrollView(frame: view.bounds)
+        sciFiAlphabetCollection.contentSize = sciFiButtons[0].bounds.size
+        sciFiAlphabetCollection.autoresizingMask = UIView.AutoresizingMask(rawValue: UIView.AutoresizingMask.flexibleWidth.rawValue | UIView.AutoresizingMask.flexibleHeight.rawValue)
+        sciFiAlphabetCollection.addSubview(sciFiButtons[0].imageView!)
+        view.addSubview(sciFiAlphabetCollection)
+    }
+    func loadKeyboard() {
+        for button in sciFiButtons {
+            button.setImage(FictionalLanguages.setImage(for: button.tag), for: .normal)
+        }
+    }
+}
 
-    }
-    
-}
-extension AltSciFiToEngVC: UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        <#code#>
-    }
-    
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-}
