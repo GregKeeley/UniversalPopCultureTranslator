@@ -15,6 +15,7 @@
 		C144D04E23B683CD00022845 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C144D04D23B683CD00022845 /* Assets.xcassets */; };
 		C144D05123B683CD00022845 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C144D04F23B683CD00022845 /* LaunchScreen.storyboard */; };
 		C144D05C23B683CE00022845 /* UniversalPopCultureTranslatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C144D05B23B683CE00022845 /* UniversalPopCultureTranslatorTests.swift */; };
+		C15AF31523C447D90022E9E6 /* AltSciFiToEngVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15AF31423C447D90022E9E6 /* AltSciFiToEngVC.swift */; };
 		C1EDE01F23BBB6C000EFD18F /* SciFiToEngViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EDE01E23BBB6C000EFD18F /* SciFiToEngViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,7 @@
 		C144D05723B683CE00022845 /* UniversalPopCultureTranslatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UniversalPopCultureTranslatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C144D05B23B683CE00022845 /* UniversalPopCultureTranslatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversalPopCultureTranslatorTests.swift; sourceTree = "<group>"; };
 		C144D05D23B683CE00022845 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C15AF31423C447D90022E9E6 /* AltSciFiToEngVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AltSciFiToEngVC.swift; sourceTree = "<group>"; };
 		C1EDE01E23BBB6C000EFD18F /* SciFiToEngViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SciFiToEngViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -109,6 +111,7 @@
 			children = (
 				C144D04823B683CC00022845 /* EngToSciFiViewController.swift */,
 				C1EDE01E23BBB6C000EFD18F /* SciFiToEngViewController.swift */,
+				C15AF31423C447D90022E9E6 /* AltSciFiToEngVC.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -215,6 +218,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C144D04923B683CC00022845 /* EngToSciFiViewController.swift in Sources */,
+				C15AF31523C447D90022E9E6 /* AltSciFiToEngVC.swift in Sources */,
 				C144D04523B683CC00022845 /* AppDelegate.swift in Sources */,
 				C144D04723B683CC00022845 /* SceneDelegate.swift in Sources */,
 				C1014F1023BE7A3C005AE40B /* Futurama1Translator.swift in Sources */,

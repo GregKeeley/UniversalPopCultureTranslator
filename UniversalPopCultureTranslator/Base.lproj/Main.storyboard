@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -19,18 +20,17 @@
                                 <rect key="frame" x="20" y="137" width="374" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <action selector="textFieldChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="lQC-hB-dIj"/>
                                 </connections>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="J6v-RQ-NGB">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Translated text will appear here" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="J6v-RQ-NGB">
                                 <rect key="frame" x="20" y="179" width="374" height="271"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7lP-5t-N9O">
@@ -579,15 +579,14 @@
                                     <constraint firstItem="Z2r-q2-GnO" firstAttribute="leading" secondItem="Yuq-UU-so7" secondAttribute="trailing" constant="8" id="zvV-mp-sdi"/>
                                 </constraints>
                             </view>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Bwf-LF-YxP">
-                                <rect key="frame" x="10" y="241" width="394" height="381"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Translated will appear here" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Bwf-LF-YxP">
+                                <rect key="frame" x="10" y="255" width="394" height="367"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="381" id="iXp-Rq-WYZ"/>
+                                    <constraint firstAttribute="height" constant="367" id="iXp-Rq-WYZ"/>
                                 </constraints>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SciFi to English" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pFM-dh-Lrz">
@@ -597,7 +596,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rn1-jb-2t6">
-                                <rect key="frame" x="10" y="136" width="394" height="95"/>
+                                <rect key="frame" x="10" y="152" width="394" height="95"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="95" id="NPL-aB-cxh"/>
                                 </constraints>
@@ -608,18 +607,42 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hid-cp-eW7">
+                                <rect key="frame" x="319" y="601" width="85" height="31"/>
+                                <subviews>
+                                    <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T37-vM-qpi">
+                                        <rect key="frame" x="0.0" y="0.0" width="85" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <state key="normal" title="DELETE"/>
+                                        <connections>
+                                            <action selector="deleteButtonPressed:" destination="wZc-gG-3Wo" eventType="touchUpInside" id="ieF-f1-XAG"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="85" id="SfJ-mk-RkZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="T37-vM-qpi" secondAttribute="trailing" id="g2J-jM-bi6"/>
+                                    <constraint firstItem="T37-vM-qpi" firstAttribute="leading" secondItem="hid-cp-eW7" secondAttribute="leading" id="iwa-5X-Zo0"/>
+                                    <constraint firstAttribute="height" constant="31" id="oHm-hY-RQC"/>
+                                    <constraint firstAttribute="bottom" secondItem="T37-vM-qpi" secondAttribute="bottom" id="vkM-ET-tuR"/>
+                                    <constraint firstItem="T37-vM-qpi" firstAttribute="top" secondItem="hid-cp-eW7" secondAttribute="top" id="wgV-nW-bRH"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="a2s-k8-snN" firstAttribute="leading" secondItem="f6H-01-eLV" secondAttribute="leading" constant="10" id="0Rd-JT-W5o"/>
                             <constraint firstItem="f6H-01-eLV" firstAttribute="bottom" secondItem="a2s-k8-snN" secondAttribute="bottom" constant="10" id="3w0-Dc-HTv"/>
                             <constraint firstItem="pFM-dh-Lrz" firstAttribute="top" secondItem="f6H-01-eLV" secondAttribute="top" constant="10" id="G4d-VM-HZX"/>
+                            <constraint firstItem="f6H-01-eLV" firstAttribute="trailing" secondItem="hid-cp-eW7" secondAttribute="trailing" constant="10" id="Xg9-RS-03F"/>
                             <constraint firstItem="Bwf-LF-YxP" firstAttribute="leading" secondItem="f6H-01-eLV" secondAttribute="leading" constant="10" id="aTG-qx-JC0"/>
                             <constraint firstItem="Zby-Ct-zy5" firstAttribute="leading" secondItem="f6H-01-eLV" secondAttribute="leading" constant="10" id="c91-xq-0O9"/>
                             <constraint firstItem="rn1-jb-2t6" firstAttribute="trailing" secondItem="f6H-01-eLV" secondAttribute="trailing" constant="-10" id="ciI-3b-5sx"/>
+                            <constraint firstItem="a2s-k8-snN" firstAttribute="top" secondItem="hid-cp-eW7" secondAttribute="bottom" id="cvq-54-ROi"/>
                             <constraint firstItem="f6H-01-eLV" firstAttribute="trailing" secondItem="Bwf-LF-YxP" secondAttribute="trailing" constant="10" id="dVY-ku-PYQ"/>
                             <constraint firstItem="a2s-k8-snN" firstAttribute="top" secondItem="Bwf-LF-YxP" secondAttribute="bottom" constant="10" id="fAl-Po-y1F"/>
-                            <constraint firstItem="Bwf-LF-YxP" firstAttribute="top" secondItem="rn1-jb-2t6" secondAttribute="bottom" constant="10" id="kax-Xo-WVB"/>
+                            <constraint firstItem="Bwf-LF-YxP" firstAttribute="top" secondItem="rn1-jb-2t6" secondAttribute="bottom" constant="8" id="kax-Xo-WVB"/>
                             <constraint firstItem="Zby-Ct-zy5" firstAttribute="top" secondItem="pFM-dh-Lrz" secondAttribute="bottom" constant="10" id="lVW-Mc-g0g"/>
                             <constraint firstItem="f6H-01-eLV" firstAttribute="trailing" secondItem="a2s-k8-snN" secondAttribute="trailing" constant="10" id="qqS-S7-DcB"/>
                             <constraint firstItem="rn1-jb-2t6" firstAttribute="leading" secondItem="f6H-01-eLV" secondAttribute="leading" constant="10" id="xQl-Ya-X6G"/>
@@ -680,20 +703,36 @@
             </objects>
             <point key="canvasLocation" x="1957.9710144927537" y="845.75892857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--Alt Sci Fi To EngVC-->
         <scene sceneID="fNe-Vr-cy1">
             <objects>
-                <viewController id="UC0-gD-Bw7" sceneMemberID="viewController">
+                <viewController id="UC0-gD-Bw7" customClass="AltSciFiToEngVC" customModule="UniversalPopCultureTranslator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Idu-x7-KP5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ap1-PX-2ku">
-                                <rect key="frame" x="0.0" y="450" width="414" height="363"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="hR4-fR-hvc">
+                                <rect key="frame" x="0.0" y="466" width="414" height="298"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <viewLayoutGuide key="contentLayoutGuide" id="eGt-bE-Qnq"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="O1D-2M-m1K"/>
-                            </scrollView>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="8Zk-Pu-slV">
+                                    <size key="itemSize" width="75" height="76"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="yDT-8j-CXk">
+                                        <rect key="frame" x="0.0" y="0.0" width="75" height="76"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="uBS-DO-rQz">
+                                            <rect key="frame" x="0.0" y="0.0" width="75" height="76"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="75" height="76"/>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="fe1-9q-zCb"/>
@@ -701,6 +740,9 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="2iX-hw-2ah"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="sciFiAlphabetCollection" destination="hR4-fR-hvc" id="FIf-vF-Sof"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I0U-9i-0Lp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

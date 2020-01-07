@@ -13,6 +13,7 @@ class SciFiToEngViewController: UIViewController {
     @IBOutlet weak var languagePicker: UIPickerView!
     @IBOutlet weak var translatedTextView: UITextView!
     @IBOutlet var sciFiButtons: [UIButton]!
+
     
     var languages = ["Futurama", "Fringe"]
     var currentLanguage: FictionalLanguages?
@@ -34,9 +35,15 @@ class SciFiToEngViewController: UIViewController {
         translatedText.append(contentsOf: FictionalLanguages.translateFromTag(for: sender.tag))
         translatedTextView.text = translatedText 
     }
-    
+    @IBAction func deleteButtonPressed(_ sender: UIButton) {
+        print(translatedText)
+        if !translatedText.isEmpty {
+            translatedTextView.text = String(translatedText.remove(at: translatedText.index(before:  translatedText.endIndex)))
+        } else {
+            translatedTextView.text = "Translated text will appear here..."
+        }
+    }
 }
-
 extension SciFiToEngViewController: UIPickerViewDataSource {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1

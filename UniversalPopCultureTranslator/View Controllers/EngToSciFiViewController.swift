@@ -11,6 +11,7 @@ import UIKit
 class EngToSciFiViewController: UIViewController {
     
     @IBOutlet weak var translatedTextView: UITextView!
+
     
     var translation = [String]()
     
@@ -35,7 +36,6 @@ class EngToSciFiViewController: UIViewController {
     }
     @IBAction func cancelButtonPressed(_ sender: UIButton) {
         translatedTextView.resignFirstResponder()
-    
         dismiss(animated: true)
     }
     @IBAction func textFieldChanged(_ sender: UITextField) {
