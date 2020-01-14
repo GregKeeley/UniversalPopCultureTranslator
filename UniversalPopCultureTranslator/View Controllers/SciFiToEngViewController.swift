@@ -37,11 +37,13 @@ class SciFiToEngViewController: UIViewController {
     }
     @IBAction func deleteButtonPressed(_ sender: UIButton) {
         print(translatedText)
+        
         if !translatedText.isEmpty {
             translatedTextView.text = String(translatedText.remove(at: translatedText.index(before:  translatedText.endIndex)))
         } else {
             translatedTextView.text = "Translated text will appear here..."
         }
+        translatedTextView.text = translatedText 
     }
 }
 extension SciFiToEngViewController: UIPickerViewDataSource {
